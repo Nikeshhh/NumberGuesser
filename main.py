@@ -5,6 +5,10 @@ def main():
     print("Welcome to the NumberGuesser!")
     while True:
         guess = input("Enter your guess!")
+        if is_valid(guess):
+            guess = int(guess)
+        else:
+            print("You probably entered wrong number.")
 
 
 def is_valid(user_input: object) -> bool:  # Checking for valid input value
@@ -19,4 +23,4 @@ def is_valid(user_input: object) -> bool:  # Checking for valid input value
 
 
 if __name__ == '__main__':
-    main()
+    print(is_valid(input()))
